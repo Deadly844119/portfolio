@@ -1,0 +1,21 @@
+.f-div {
+  background-color: var(--pureWhite);
+  border: 1px solid var(--lightGrey);
+  padding: 10px 20px;
+  border-radius: 30px 0px;
+  transition: 0.7s ease all;
+  color: var(--bg-color);
+  box-shadow: 2px 2px 2px var(--lightGrey);
+  cursor: pointer;
+}
+.f-div:hover {
+  background-color: var(--lightGrey);
+  color: var(--pureWhite);
+  font-weight: 100;
+  box-shadow: 4px 4px 4px var(--pureWhite);
+}
+@media only screen and (max-width: 700px) {
+  .f-div {
+    padding: 7px 12px;
+  }
+}

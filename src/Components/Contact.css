@@ -1,0 +1,142 @@
+.main-contact-container {
+  min-height: 100vh;
+  display: flex;
+  max-width: 100%;
+  position: relative;
+  padding: 40px 80px;
+  flex-direction: column;
+  padding-top: 15vh;
+}
+.content {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--pureWhite);
+}
+.contact-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  /* align-items: center;
+    justify-content: center; */
+}
+.contact-info-left {
+  width: 50%;
+  /* background-color: red; */
+  height: 100%;
+}
+.contact-info-right {
+  width: 50%;
+  /* background-color: grey; */
+  height: 100%;
+}
+.content h2 {
+  margin-bottom: 20px;
+}
+.left-info-box {
+  display: flex;
+  margin-top: 30px;
+  color: var(--pureWhite);
+}
+.left-info-box .icon {
+  width: 40px;
+  height: 40px;
+  color: var(--pureWhite);
+  background-color: var(--bg-color);
+  border: 2px solid var(--pureWhite);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0px 30px 0px 30px;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.text p,
+.text h3 {
+  padding: 5px 5px 5px 0px;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--pureWhite);
+  cursor: text;
+  border-bottom: 2px solid var(--pureWhite);
+  resize: none;
+}
+.input-box {
+  position: relative;
+  margin-top: 50px;
+}
+.input-box span {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  color: var(--pureWhite);
+  transition: 0.5s ease all;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.input-box button {
+  padding: 7px 60px;
+  border: 2px solid var(--pureWhite);
+  outline: none;
+  color: var(--pureWhite);
+  background-color: transparent;
+  transition: 0.5s ease all;
+}
+.input-box button:hover {
+  color: var(--bg-color);
+  background-color: var(--pureWhite);
+  border: 2px solid var(--pureWhite);
+}
+.input-box input:focus ~ span,
+.input-box textarea:focus ~ span,
+.input-box input:valid ~ span,
+.input-box textarea:valid ~ span {
+  transform: translateY(-20px);
+  opacity: 1;
+  font-size: 14px;
+}
+@media only screen and (max-width: 850px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-info-left,
+  .contact-info-right {
+    width: 100%;
+  }
+  input,
+  textarea {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 510px) {
+  .main-contact-container {
+    padding: 40px 20px;
+  }
+  .contact-info-left,
+  .contact-info-right {
+    max-width: 100%;
+  }
+  .left-info-box .icon {
+    margin: 0px 10px 0px 10px;
+  }
+  input,
+  textarea {
+    width: 95%;
+  }
+}
