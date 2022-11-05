@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import Projects from "./Components/Projects";
@@ -30,7 +30,16 @@ export default function App() {
   return (
     <>
     <div id="MyApp">
-      <HashRouter>
+      <BrowserRouter basename="/portfolio">
+      <Navbar toggleMode={toggleMode} Mode={Mode} />
+        <Routes>
+          <Route exact path="/" element={<Hero/>}></Route>
+          <Route path="/projects" element={<Projects/>}></Route>
+          <Route path="/about" element={<About/>}></Route>
+          <Route path="/contact" element={<Contact/>}></Route>
+        </Routes>
+      </BrowserRouter>
+      {/* <HashRouter>
         <Navbar toggleMode={toggleMode} Mode={Mode} />
       <Routes>
           <Route path="/" element={<Hero />} />
@@ -38,7 +47,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
       </Routes>
-    </HashRouter>
+    </HashRouter> */}
     </div>
     </>
   );
