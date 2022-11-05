@@ -31,13 +31,12 @@ export default function App() {
     <>
     <div id="MyApp">
       <HashRouter>
+        <Navbar toggleMode={toggleMode} Mode={Mode} />
       <Routes>
-        <Route path="/" element={<Navbar toggleMode={toggleMode} Mode={Mode} />}>
-          <Route index element={<Hero />} />
-          <Route path="projects" element={<Projects />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-        </Route>
+          <Route path="/" element={<Hero />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
       </Routes>
     </HashRouter>
     </div>
