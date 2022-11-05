@@ -33,7 +33,7 @@ export default function App() {
       <HashRouter basename="/portfolio">
       <Navbar toggleMode={toggleMode} Mode={Mode} />
         <Routes>
-          <Route exact path="/" element={<Hero/>}></Route>
+          <Route exact path="/portfolio" element={<Hero/>}></Route>
           <Route path="/projects" element={<Projects/>}></Route>
           <Route path="/about" element={<About/>}></Route>
           <Route path="/contact" element={<Contact/>}></Route>
